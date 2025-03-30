@@ -7,8 +7,9 @@
 
 import Foundation
 
-let days = [
-    Day01()
+let days: [Day] = [
+    Day01(),
+    Day02()
 ]
 
 for day in days {
