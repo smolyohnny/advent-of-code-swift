@@ -26,6 +26,14 @@ struct DayExample: Day {
     
 }
 
+
+// MARK: - Shared methods
+
+extension DayExample {
+    
+}
+
+
 // MARK: - Part 1 methods
 
 extension DayExample {
@@ -43,10 +51,4 @@ extension DayExample {
         
         return 0
     }
-}
-
-// MARK: - Shared methods
-
-extension DayExample {
-    
 }
