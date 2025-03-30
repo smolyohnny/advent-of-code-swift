@@ -21,7 +21,7 @@ struct DayExample: Day {
     }
     
     func printSolution() {
-        print("Day \(day)\n\(solvePartOne())\n\(solvePartTwo())\n")
+        print("Day \(day)\n \(solvePartOne())\n \(solvePartTwo())\n")
     }
     
 }
