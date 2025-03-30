@@ -8,7 +8,7 @@
 import Foundation
 
 let days = [
-    DayExample()
+    Day01()
 ]
 
 for day in days {

@@ -23,9 +23,22 @@
 		A3F6B8CE2D98A70B0061E0E5 /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		A3A35B462D98BB8F008DB3F4 /* Exceptions for "AdventOfCode" folder in "Compile Sources" phase from "AdventOfCode" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = A3F6B8CA2D98A70B0061E0E5 /* Sources */;
+			membershipExceptions = (
+				Inputs/01.txt,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A3F6B8D02D98A70B0061E0E5 /* AdventOfCode */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A3A35B462D98BB8F008DB3F4 /* Exceptions for "AdventOfCode" folder in "Compile Sources" phase from "AdventOfCode" target */,
+			);
 			path = AdventOfCode;
 			sourceTree = "<group>";
 		};
