@@ -29,9 +29,9 @@ struct DayExample: Day {
 // MARK: - Part 1 methods
 
 extension DayExample {
-    func solvePartOne() -> String {
+    func solvePartOne() -> Int {
         
-        return "Solution 1 placeholder"
+        return 0
     }
 }
 
@@ -39,9 +39,9 @@ extension DayExample {
 // MARK: - Part 2 methods
 
 extension DayExample {
-    func solvePartTwo() -> String {
+    func solvePartTwo() -> Int {
         
-        return "Solution 2 placeholder"
+        return 0
     }
 }
 

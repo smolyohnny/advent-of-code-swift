@@ -10,6 +10,6 @@ protocol Day {
     var input: [String] { get }
     
     func printSolution() -> Void
-    func solvePartOne() -> String
-    func solvePartTwo() -> String
+    func solvePartOne() -> Int
+    func solvePartTwo() -> Int
 }
