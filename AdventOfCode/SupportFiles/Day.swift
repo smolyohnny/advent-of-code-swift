@@ -7,7 +7,7 @@
 
 protocol Day {
     var day: String { get }
-    var input: [String] { get }
+    var input: String { get }
     
     func printSolution() -> Void
     func solvePartOne() -> Int

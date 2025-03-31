@@ -9,14 +9,14 @@ struct DayExample: Day {
     
     var day: String = "example"
     
-    var input: [String]
+    var input: String
     
     init() {
         do {
             input = try Utils.getInputForDay(day)
         } catch {
             print("Failed to read input for day \(day)")
-            input = []
+            input = ""
         }
     }
     

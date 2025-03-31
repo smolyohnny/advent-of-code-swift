@@ -9,14 +9,14 @@ struct Day02: Day {
     
     var day: String = "02"
     
-    var input: [String]
+    var input: String
     
     init() {
         do {
             input = try Utils.getInputForDay(day)
         } catch {
             print("Failed to read input for day \(day)")
-            input = []
+            input = ""
         }
     }
     
@@ -30,10 +30,15 @@ struct Day02: Day {
 // MARK: - Shared methods
 
 extension Day02 {
-    func parseInput() -> [[Int]] {
+    
+    func splitInputByLine() -> [String] {
+        return input.components(separatedBy: "\n").dropLast()
+    }
+    
+    func parseInput(lines: [String]) -> [[Int]] {
         var result: [[Int]] = []
         
-        for line in input {
+        for line in lines {
             result.append(line.split(separator: " ").map { Int($0) ?? -1 })
         }
         return result
@@ -65,7 +70,7 @@ extension Day02 {
     func solvePartOne() -> Int {
         
         var safeReports = 0
-        let data = parseInput()
+        let data = parseInput(lines: splitInputByLine())
         
         for row in data {
             if isAscending(row) || isDescending(row) {
@@ -85,7 +90,7 @@ extension Day02 {
     func solvePartTwo() -> Int {
         
         var safeReports = 0
-        let data = parseInput()
+        let data = parseInput(lines: splitInputByLine())
         
         for row in data {
             if isAscending(row) || isDescending(row) {

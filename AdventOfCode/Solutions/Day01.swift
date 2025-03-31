@@ -9,13 +9,14 @@ struct Day01: Day {
     
     var day: String = "01"
     
-    var input: [String] = []
+    var input: String
     
     init() {
         do {
             try loadInput()
         } catch {
             print("Error loading input: \(error)")
+            input = ""
         }
     }
     
@@ -33,9 +34,13 @@ struct Day01: Day {
 
 extension Day01 {
     
-    func parseInputTouple() -> ([Int], [Int]) {
-        let leftColumn = input.map { Int($0.components(separatedBy: .whitespaces).first ?? "") ?? -1}
-        let rightColumn = input.map { Int($0.components(separatedBy: .whitespaces).last ?? "") ?? -1}
+    func splitInputByLine() -> [String] {
+        return input.components(separatedBy: "\n").dropLast()
+    }
+    
+    func parseInputTouple(lines: [String]) -> ([Int], [Int]) {
+        let leftColumn = lines.map { Int($0.components(separatedBy: .whitespaces).first ?? "") ?? -1}
+        let rightColumn = lines.map { Int($0.components(separatedBy: .whitespaces).last ?? "") ?? -1}
         return (leftColumn, rightColumn)
     }
     
@@ -47,7 +52,7 @@ extension Day01 {
     func solvePartOne() -> Int{
         
         var totalDistance = 0
-        var (left, right) = parseInputTouple()
+        var (left, right) = parseInputTouple(lines: splitInputByLine())
         
         left.sort(by: >)
         right.sort(by: >)
@@ -68,7 +73,7 @@ extension Day01 {
     func solvePartTwo() -> Int {
         
         var similarityScore = 0
-        let (left, right) = parseInputTouple()
+        let (left, right) = parseInputTouple(lines: splitInputByLine())
         
         for wantedValue in left {
             var appearences = 0
