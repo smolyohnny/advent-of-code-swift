@@ -13,16 +13,13 @@ struct Day01: Day {
     
     init() {
         do {
-            try loadInput()
+            input = try Utils.getInputForDay(day)
         } catch {
             print("Error loading input: \(error)")
             input = ""
         }
     }
-    
-    mutating func loadInput() throws {
-        input = try Utils.getInputForDay(day)
-    }
+
     
     func printSolution() {
         print("Day \(day)\n \(solvePartOne())\n \(solvePartTwo())\n")
